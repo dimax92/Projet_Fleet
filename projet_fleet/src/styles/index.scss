@@ -1,0 +1,116 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+#root{
+    height: 100%;
+    width: 100%;
+}
+.page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pageRecherche{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .recherche{
+        height: 15%;
+        background: #4fc3f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            height:100%;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                height: 40%;
+                width: 20%;
+                border-radius: 20px 0px 0px 20px;
+                background: white;
+                border: solid 3px;
+                border-right: solid 0px;
+                cursor: pointer;
+            }
+            input{
+                height: 40%;
+                width: 80%;
+                border-radius: 0px 20px 20px 0px;
+                border: solid 3px;
+                border-left: solid 0px;
+            }
+        }
+    }
+    .map{
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        .mapFilm{
+            height: 40px;
+            min-height: 40px;
+            border: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            p{
+                text-align: center;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+}
+.film{
+    height: 100%;
+    width: 60%;
+    background: #9ccc65;
+    .titreImage{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img{
+            width: 60%;
+            margin: 40px 20px 20px 20px;
+        }
+        .titreNote{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+    }
+    .description{
+        margin: 10px;
+    }
+}
+@media (max-width:500px){
+    .pageRecherche{
+        width: 100%;
+    }
+    .film{
+        width:100%;
+        height: initial !important;
+    }
+    .titreImage{
+        justify-content: center;
+    }
+}
